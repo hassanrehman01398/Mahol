@@ -43,7 +43,7 @@ class _OrderState extends State<Order> {
                   child: ListTile(
                     leading: CircleAvatar(
                       backgroundColor: primary,
-                      child: Icon(Icons.payment),
+                      child: Icon(Icons.payment,color: Colors.white,),
                     ),
                     title: Text("Order",style: TextStyle(color: notifier.darkTheme ? Colors.white :primary),),
                     subtitle: Text(DateFormat('dd MM yyyy hh:mm').format(orders[index]["date"])),

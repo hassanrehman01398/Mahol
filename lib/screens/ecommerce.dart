@@ -100,26 +100,23 @@ class _EcommerceState extends State<Ecommerce> {
                 Text("Fertilizers",style: TextStyle(color: notifier.darkTheme ? Colors.white :primary,fontWeight: FontWeight.w900,fontSize: 15),),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left:35.0,right: 35.0),
-              child: Container(
-                height: 80,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: fertilizer.length,
-                    itemBuilder: (context,index) => Padding(
-                      padding: const EdgeInsets.all(12.0),
+            Container(
+              height: 80,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: fertilizer.length,
+                  itemBuilder: (context,index) => Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: primary,
                       child: CircleAvatar(
-                        radius: 30,
-                        backgroundColor: primary,
-                        child: CircleAvatar(
-                            backgroundColor: primary,
-                            radius: 27,
-                            backgroundImage: NetworkImage(fertilizer[index]['pic'])
-                        ),
+                          backgroundColor: primary,
+                          radius: 27,
+                          backgroundImage: NetworkImage(fertilizer[index]['pic'])
                       ),
-                    )
-                ),
+                    ),
+                  )
               ),
             ),
             Row(
